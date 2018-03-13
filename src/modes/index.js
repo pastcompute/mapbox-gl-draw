@@ -7,7 +7,7 @@ const modes = [
   'draw_line_string'
 ];
 
-module.exports = modes.reduce((m, k) => {
+module.exports = modes.reduce(function(m, k) {
   m[k] = require(`./${k}`);
   return m;
 }, {});
