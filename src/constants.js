@@ -58,7 +58,8 @@ module.exports = {
     ACTIONABLE: 'draw.actionable',
     RENDER: 'draw.render',
     COMBINE_FEATURES: 'draw.combine',
-    UNCOMBINE_FEATURES: 'draw.uncombine'
+    UNCOMBINE_FEATURES: 'draw.uncombine',
+    VERTEX_ADD: 'draw.vertexadd',
   },
   updateActions: {
     MOVE: 'move',

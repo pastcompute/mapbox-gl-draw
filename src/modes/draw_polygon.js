@@ -40,6 +40,13 @@ DrawPolygon.clickAnywhere = function(state, e) {
   state.polygon.updateCoordinate(`0.${state.currentVertexPosition}`, e.lngLat.lng, e.lngLat.lat);
   state.currentVertexPosition++;
   state.polygon.updateCoordinate(`0.${state.currentVertexPosition}`, e.lngLat.lng, e.lngLat.lat);
+
+  this.map.fire(Constants.events.VERTEX_ADD, {
+    object: 'polygon',
+    objectId: state.polygon.id,
+    coords: state.polygon.getCoordinates(),
+    vertexPosition: state.currentVertexPosition,
+  });
 };
 
 DrawPolygon.clickOnVertex = function(state) {
