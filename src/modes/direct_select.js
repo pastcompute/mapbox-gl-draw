@@ -68,8 +68,10 @@ DirectSelect.pathsToCoordinates = function(featureId, paths) {
 };
 
 DirectSelect.onFeature = function(state, e) {
-  if (state.selectedCoordPaths.length === 0) this.startDragging(state, e);
-  else this.stopDragging(state);
+  // PLATFARM - FIXME - DISABLED MOVE OF ENTIRE POLYGON - blockeditor issue https://bitbucket.org/platfarm_com/webpage-issue-tracker/issues/32
+  // WOULD OF COURSE BE BETTER TO HAVE AN API TO TURN IT OFF / ON !!!
+  // if (state.selectedCoordPaths.length === 0) this.startDragging(state, e);
+  // else this.stopDragging(state);
 };
 
 DirectSelect.dragFeature = function(state, e, delta) {
